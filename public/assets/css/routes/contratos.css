@@ -1,0 +1,44 @@
+/* Estilos da tela original: contratos/index.php */
+.lp-header { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; margin-bottom:4px; }
+.lp-title { margin:0; font-size:1.5rem; font-weight:800; color:var(--text); }
+.lp-subtitle { font-size:.85rem; color:var(--muted); margin-top:2px; }
+.cm-btn-editar { display:inline-flex; align-items:center; gap:4px; padding:5px 10px; border:1px solid var(--border); border-radius:7px; font-size:.78rem; font-weight:600; color:var(--text); text-decoration:none; background:var(--card); }
+.cm-btn-editar:hover { background:var(--hover); }
+.cm-btn-del-link { display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:7px; color:var(--muted); text-decoration:none; }
+.cm-btn-del-link:hover { background:#fee2e2; color:#dc2626; }
+/* Alert bars */
+.ct-alert-bar { background:var(--card); border:1px solid var(--border); border-radius:12px; overflow:hidden; margin-bottom:0; }
+.ct-alert-head { display:flex; align-items:center; gap:8px; padding:14px 20px 10px; font-weight:700; font-size:.875rem; }
+.ct-alert-items { padding:0 20px 16px; display:flex; flex-direction:column; gap:8px; }
+.ct-alert-item { display:flex; align-items:center; gap:12px; padding:10px 14px; border-radius:8px; background:var(--hover); }
+.ct-alert-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; }
+.ct-dot-danger { background:#dc2626; }
+.ct-dot-warn { background:#d97706; }
+.ct-dot-info { background:#2563eb; }
+.ct-dot-ended { background:var(--muted); }
+.ct-alert-nome { font-weight:600; font-size:.875rem; }
+.ct-alert-info { font-size:.78rem; color:var(--muted); }
+/* Trunca colunas longas para caber em 1200px sem scroll */
+.contratos-page .tabela-contratos td:nth-child(3),
+.contratos-page .tabela-contratos td:nth-child(4) { max-width: 160px; }
+.ct-alert-actions { margin-left:auto; display:flex; gap:6px; }
+/* Expand rows */
+.detail-row { display:none; }
+.detail-row.show { display:table-row; }
+.detail-box { padding:16px 20px; background:var(--hover); }
+.detail-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:12px; }
+.detail-label { font-size:.72rem; font-weight:600; color:var(--muted); text-transform:uppercase; margin-bottom:3px; }
+.detail-value { font-size:.875rem; color:var(--text); }
+/* Imovel cell */
+.cm-imovel-cell { display:flex; flex-direction:column; gap:2px; }
+.cm-imovel-nome { font-weight:600; font-size:.875rem; color:var(--text); text-decoration:none; }
+.cm-imovel-nome:hover { text-decoration:underline; }
+.cm-imovel-end { font-size:.75rem; color:var(--muted); }
+/* Inquilino cell */
+.cm-inq-cell { display:flex; align-items:center; gap:8px; }
+.cm-avatar { width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:.68rem; font-weight:700; color:#fff; flex-shrink:0; }
+/* Badges */
+.badge.b-disponivel { background:#dcfce7; color:#166534; }
+.badge.b-futura { background:#f1f5f9; color:#64748b; }
+/* Alert more */
+.ct-alert-more { font-size:.78rem; color:var(--muted); padding:6px 0 2px; }

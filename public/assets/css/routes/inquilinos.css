@@ -1,0 +1,38 @@
+/* Estilos da tela original: inquilinos/index.php */
+.lp-header { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; margin-bottom:4px; }
+.lp-title { margin:0; font-size:1.5rem; font-weight:800; color:var(--text); }
+.lp-subtitle { font-size:.85rem; color:var(--muted); margin-top:2px; }
+.cm-btn-editar { display:inline-flex; align-items:center; gap:4px; padding:5px 10px; border:1px solid var(--border); border-radius:7px; font-size:.78rem; font-weight:600; color:var(--text); text-decoration:none; background:var(--card); }
+.cm-btn-editar:hover { background:var(--hover); }
+.cm-btn-del-link { display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:7px; color:var(--muted); text-decoration:none; }
+.cm-btn-del-link:hover { background:#fee2e2; color:#dc2626; }
+.cm-btn-whats { display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border:0; border-radius:7px; color:#25d366; text-decoration:none; background:transparent; padding:0; cursor:pointer; }
+.cm-btn-whats:hover { background:#dcfce7; }
+.cm-btn-whats.disabled,
+.cm-btn-whats:disabled { color:var(--muted); opacity:.38; cursor:not-allowed; background:transparent; }
+.linha-inquilino .btn-expand { width:28px; height:28px; border:none; background:transparent; cursor:pointer; color:var(--muted); display:flex; align-items:center; justify-content:center; border-radius:5px; transition:transform .15s; }
+.linha-inquilino .btn-expand.open { transform:rotate(90deg); }
+.detail-row { display:none; }
+.detail-row.show { display:table-row; }
+.detail-box { padding:16px 20px; background:var(--hover); border-top:1px solid var(--border); }
+.detail-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:12px; }
+.detail-label { font-size:.72rem; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:.04em; margin-bottom:3px; }
+.detail-value { font-size:.875rem; color:var(--text); }
+.cm-avatar { width:32px; height:32px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:.7rem; font-weight:700; color:#fff; flex-shrink:0; }
+.cm-inq-cell { display:flex; align-items:center; gap:10px; }
+.cm-dash { color:var(--muted); }
+.cm-acoes { display:flex; align-items:center; gap:6px; }
+/* Trunca NOME PIX para caber em 1200px sem scroll */
+.cm-tabela td:nth-child(5) { max-width: 160px; overflow: hidden; text-overflow: ellipsis; }
+
+/* Filtro simples: input ocupa toda a largura, botões ao lado */
+.cm-filters-body .form {
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 12px;
+}
+.cm-filters-body .col.actions {
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 8px;
+}

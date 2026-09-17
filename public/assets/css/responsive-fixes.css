@@ -1,0 +1,189 @@
+/* Correcoes finais da demonstracao React para manter todo o conteudo na viewport. */
+html,
+body,
+#root,
+.app-shell {
+  width: 100%;
+  max-width: 100%;
+}
+
+.app-shell {
+  overflow: visible;
+}
+
+.content-wrap {
+  flex: 0 1 auto;
+  width: calc(100% - var(--sidebar-w));
+  max-width: calc(100% - var(--sidebar-w));
+  min-width: 0;
+}
+
+body.sidebar-collapsed .content-wrap {
+  width: calc(100% - 60px);
+  max-width: calc(100% - 60px);
+}
+
+.page-content,
+.page-content > *,
+.dash-page,
+.cm-page,
+.contratos-page,
+.controle-mensal-page,
+.cobrancas-page,
+.documentos-page,
+.configuracoes-page,
+.rl-page,
+.card,
+.cm-table-card,
+.table-wrap,
+.table-scroll {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.table-wrap,
+.table-scroll,
+.cm-table-card .table-wrap,
+.card .table-wrap,
+.compact-fit-page .table-wrap {
+  display: block;
+  width: 100%;
+  overflow-x: auto !important;
+  overflow-y: visible;
+  scrollbar-gutter: stable;
+  overscroll-behavior-inline: contain;
+}
+
+.table-wrap > table,
+.table-scroll > table {
+  max-width: none;
+}
+
+/* O controle mensal tem oito colunas e cabe inteiro em telas de apresentacao. */
+.controle-mensal-page .listagem-table--mensal {
+  width: 100% !important;
+  min-width: 0 !important;
+  table-layout: fixed;
+}
+
+.controle-mensal-page .listagem-table--mensal th,
+.controle-mensal-page .listagem-table--mensal td {
+  min-width: 0 !important;
+}
+
+.controle-mensal-page .listagem-table--mensal th:nth-child(1) { width: 20%; }
+.controle-mensal-page .listagem-table--mensal th:nth-child(2) { width: 17%; }
+.controle-mensal-page .listagem-table--mensal th:nth-child(3) { width: 7%; }
+.controle-mensal-page .listagem-table--mensal th:nth-child(4) { width: 10%; }
+.controle-mensal-page .listagem-table--mensal th:nth-child(5) { width: 10%; }
+.controle-mensal-page .listagem-table--mensal th:nth-child(6) { width: 10%; }
+.controle-mensal-page .listagem-table--mensal th:nth-child(7) { width: 11%; }
+.controle-mensal-page .listagem-table--mensal th:nth-child(8) { width: 15%; }
+
+.controle-mensal-page .listagem-table--mensal .cm-imovel-nome,
+.controle-mensal-page .listagem-table--mensal .cm-imovel-end,
+.controle-mensal-page .listagem-table--mensal .cm-inq-cell > a,
+.controle-mensal-page .listagem-table--mensal .cm-inq-cell > span {
+  max-width: 100%;
+}
+
+.controle-mensal-page .listagem-table--mensal .cm-acoes {
+  min-width: 0;
+  flex-wrap: nowrap;
+  gap: 5px;
+}
+
+.controle-mensal-page .listagem-table--mensal td:last-child {
+  overflow: visible !important;
+  white-space: nowrap;
+}
+
+.controle-mensal-page .listagem-table--mensal .cm-btn-baixa {
+  flex: 1 1 auto;
+  min-width: 82px;
+  padding-inline: 8px;
+  font-size: .72rem;
+}
+
+.controle-mensal-page .listagem-table--mensal .cm-btn-more,
+.controle-mensal-page .listagem-table--mensal .btn-row-menu,
+.controle-mensal-page .listagem-table--mensal .mini-icon-btn {
+  flex: 0 0 30px;
+}
+
+@media (max-width: 1180px) {
+  .controle-mensal-page .listagem-table--mensal {
+    min-width: 900px !important;
+    table-layout: auto;
+  }
+
+  .controle-mensal-page .listagem-table--mensal th:nth-child(n) {
+    width: auto;
+  }
+
+  .cm-header,
+  .lp-header,
+  .page-head,
+  .rl-head {
+    align-items: flex-start;
+  }
+
+  .cm-header-actions,
+  .dash-actions,
+  .doc-actions,
+  .rl-export-btns {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .content-wrap,
+  body.sidebar-collapsed .content-wrap {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0 !important;
+  }
+
+  .page-content {
+    width: 100%;
+    padding: 14px 12px;
+  }
+
+  .topbar {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .cm-header,
+  .lp-header,
+  .page-head,
+  .rl-head,
+  .doc-preview-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cm-header-actions,
+  .dash-actions,
+  .doc-actions,
+  .rl-export-btns {
+    width: 100%;
+  }
+
+  .cm-header-actions > *,
+  .dash-actions > *,
+  .doc-actions > *,
+  .rl-export-btns > * {
+    flex: 1 1 auto;
+  }
+
+  .modal-box,
+  .demo-modal-box,
+  .demo-modal-box.modal-wide {
+    width: calc(100vw - 20px);
+    max-width: calc(100vw - 20px);
+  }
+}

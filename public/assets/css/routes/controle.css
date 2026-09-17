@@ -1,0 +1,21 @@
+/* Estilos da tela original: cobrancas/controle_mensal.php */
+/* Trunca IMÓVEL e INQUILINO para caber em 1200px sem scroll */
+.cm-tabela td:nth-child(1) { max-width: 150px; overflow: hidden; text-overflow: ellipsis; }
+.cm-tabela td:nth-child(2) { max-width: 130px; overflow: hidden; text-overflow: ellipsis; }
+.controle-mensal-page .listagem-cell-actions {
+  width: 150px;
+  min-width: 150px;
+  overflow: visible !important;
+  white-space: nowrap !important;
+}
+.controle-mensal-page .listagem-cell-actions .cm-acoes {
+  flex-wrap: nowrap;
+  min-width: max-content;
+}
+.controle-mensal-page .listagem-cell-actions .row-menu-wrap,
+.controle-mensal-page .listagem-cell-actions .cm-btn-more {
+  flex: 0 0 30px;
+}
+.controle-mensal-page .js-client-hidden {
+  display: none !important;
+}

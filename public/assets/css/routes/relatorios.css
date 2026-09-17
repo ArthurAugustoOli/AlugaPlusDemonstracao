@@ -1,0 +1,245 @@
+/* Estilos da tela original: relatorios/index.php */
+.rl-page { padding: 20px 24px; }
+
+.lp-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+.lp-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 4px;
+  line-height: 1.2;
+}
+.lp-subtitle {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Type tabs */
+.rl-tipo-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.rl-tipo-tab {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all .15s;
+}
+.rl-tipo-tab:hover { border-color: var(--primary); color: var(--primary); }
+.rl-tipo-tab.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+.rl-tipo-tab .material-symbols-outlined { font-size: 16px; }
+
+/* KPI cards */
+.cm-kpi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 20px; }
+@media (max-width: 900px) { .cm-kpi-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 500px) { .cm-kpi-grid { grid-template-columns: 1fr; } }
+
+.cm-kpi-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.cm-kpi-top { display: flex; align-items: center; justify-content: space-between; }
+.cm-kpi-label { font-size: 12px; color: var(--muted); font-weight: 500; text-transform: uppercase; letter-spacing: .5px; }
+.cm-kpi-ico {
+  width: 36px; height: 36px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+}
+.cm-kpi-ico .material-symbols-outlined { font-size: 18px; }
+.cm-kpi-value { font-size: 22px; font-weight: 700; color: var(--text); line-height: 1; }
+.cm-kpi-sub { font-size: 12px; color: var(--muted); }
+.cm-ico-green { background: #dcfce7; color: #16a34a; }
+.cm-ico-blue  { background: #dbeafe; color: #2563eb; }
+.cm-ico-orange{ background: #ffedd5; color: #ea580c; }
+.cm-ico-red   { background: #fee2e2; color: #dc2626; }
+.cm-ico-purple{ background: #ede9fe; color: #7c3aed; }
+
+/* Filters card */
+.cm-filters summary {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--text);
+  user-select: none;
+}
+.cm-filters summary::-webkit-details-marker { display: none; }
+.cm-filters summary .material-symbols-outlined { font-size: 18px; color: var(--muted); }
+.cm-filter-badge {
+  background: var(--primary);
+  color: #fff;
+  border-radius: 99px;
+  font-size: 11px;
+  padding: 1px 7px;
+  font-weight: 600;
+}
+.cm-filters-body { padding-top: 16px; }
+
+/* Results tables */
+.cm-table-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.cm-table-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.cm-table-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.cm-table-title .material-symbols-outlined { font-size: 18px; color: var(--muted); }
+.cm-table-meta { font-size: 12px; color: var(--muted); }
+.cm-tabela { width: 100%; border-collapse: collapse; font-size: 12px; }
+.cm-tabela th {
+  padding: 7px 8px;
+  text-align: left;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .4px;
+  color: var(--muted);
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  white-space: nowrap;
+}
+.cm-tabela td {
+  padding: 7px 8px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+  vertical-align: middle;
+  max-width: 180px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cm-tabela tbody tr:last-child td { border-bottom: none; }
+.cm-tabela tbody tr:hover { background: var(--hover, rgba(0,0,0,.03)); }
+.cm-tabela .muted { color: var(--muted); text-align: center; padding: 24px; }
+
+/* Export actions */
+.rl-export-btns {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.rl-btn-export {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 7px 14px;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background .15s;
+}
+.rl-btn-export:hover { background: var(--border); }
+.rl-btn-export .material-symbols-outlined { font-size: 14px; }
+.rl-btn-export-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+.rl-btn-export-primary:hover { opacity: .9; background: var(--primary); }
+
+/* PDF modal */
+#modalPdf {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.rl-modal-box {
+  background: var(--card);
+  width: 100%;
+  max-width: 520px;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.25);
+}
+.rl-modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.rl-modal-head h3 { margin: 0; font-size: 16px; color: var(--text); }
+.rl-modal-close {
+  border: none;
+  background: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--muted);
+  line-height: 1;
+}
+.rl-modal-opts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 20px;
+  margin-bottom: 20px;
+}
+.rl-modal-opts label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text);
+  cursor: pointer;
+}
+.rl-modal-opts label input[type=checkbox] { width: auto; }
+.rl-modal-foot {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}

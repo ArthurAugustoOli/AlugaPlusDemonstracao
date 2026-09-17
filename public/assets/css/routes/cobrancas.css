@@ -1,0 +1,12 @@
+/* Estilos da tela original: cobrancas/index.php */
+.lp-header { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px; margin-bottom:4px; }
+.lp-title { margin:0; font-size:1.5rem; font-weight:800; color:var(--text); }
+.lp-subtitle { font-size:.85rem; color:var(--muted); margin-top:2px; }
+.cm-btn-editar { display:inline-flex; align-items:center; gap:4px; padding:5px 10px; border:1px solid var(--border); border-radius:7px; font-size:.78rem; font-weight:600; color:var(--text); text-decoration:none; background:var(--card); }
+.cm-btn-editar:hover { background:var(--hover); }
+.cm-btn-del-link { display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:7px; color:var(--muted); text-decoration:none; }
+.cm-btn-del-link:hover { background:#fee2e2; color:#dc2626; }
+/* Trunca colunas longas para caber em 1200px sem scroll */
+.cm-tabela td:nth-child(2) { max-width: 160px; overflow: hidden; text-overflow: ellipsis; }
+.cm-tabela td:nth-child(3) { max-width: 140px; overflow: hidden; text-overflow: ellipsis; }
+.cm-tabela td:nth-child(4) { max-width: 130px; overflow: hidden; text-overflow: ellipsis; }
